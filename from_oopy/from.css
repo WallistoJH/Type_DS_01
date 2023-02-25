@@ -1,0 +1,458 @@
+
+/* 여기서 부터는 절대로!!! 건들지 말아주세요 */
+:root {
+    --color-black: #1a1a1a;
+    --color-primary: #2a6eff;
+    --color-gray: #757575;
+    --color-gray-line: #e0e0e0;
+    --color-white: #ffffff;
+    --color-white-gray: #f5f5f5;
+
+    --font-h1: 56px;
+    --font-h1-l: 72px;
+
+    --font-h4: 32px;
+    --font-h4-l: 40px;
+    --font-h5: 24px;
+    --font-h5-l: 32px;
+    --font-h6: 20px;
+    --font-h6-l: 28px;
+    --font-body: 16px;
+    --font-body-l: 24px;
+    --font-caption: 12px;
+    --font-caption-l: 16px;
+
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+
+
+/*  상단 스타일 코어 세팅
+    _______
+*/
+html {opacity:0; padding: 0; margin: 0;}
+html.wf-active { opacity: 1;}
+.notion-app-inner > .notion-frame > .notion-scroller { margin-top: -48px; }
+.notion-app-inner > .notion-frame > div:first-of-type div { border: none !important; justify-content:flex-end; }
+/*.notion-app-inner > .notion-frame > .notion-scroller > div:not(.notion-page-content) { display: none !important; }
+.notion-app-inner > .notion-frame > .notion-scroller > div:first-of-type { display: none !important; }*/
+
+/* 상단 breadcrumb 제거*/
+.notion-topbar + div + div { display: none !important; }
+
+
+/*  최상단 프롬 배너
+    _______
+*/
+.notion-app-inner > .notion-frame > .notion-scroller > div:first-of-type { display: block !important; max-width: 1440px; font-size: 0; }
+.notion-app-inner > .notion-frame > .notion-scroller > div:first-of-type > img.page_cover {
+    display: inline-block !important;
+    width: 366px !important;
+    height: 174px !important;
+    margin: 48px 0 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    transform: translateX(40px);
+}
+@media screen and (max-width: 980px) {
+    .notion-app-inner > .notion-frame > .notion-scroller > div:first-of-type > img.page_cover {
+        display: block !important;
+        width: 230px !important;
+        height: 104px !important;
+        margin: 84px auto 20px;
+        transform: none;
+    }
+}
+/* 최상단 프롬 배너 타이틀 */
+.from-header-title {
+    padding: 0 40px;
+    text-align: left;
+}
+.from-header-title h6 {
+    margin: 0 0 8px;
+    font-size: var(--font-h6);
+    line-height: var(--font-h6-l);
+    font-family: var(--font-montserrat);
+}
+.from-header-title p {
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-body);
+    line-height: var(--font-body-l);
+    font-family: var(--font-montserrat);
+    color: var(--color-gray);
+}
+
+/* 최상단 프롬 서브 로고 */
+.from-header-title + div { padding: 0 40px !important; margin-top: 64px }
+.from-header-title + div > div:first-of-type {
+    display: block !important;
+    width: 114px !important;
+    height: 114px !important;
+    margin: 0 !important;.from-header-title + div > div
+}
+.from-header-title + div > div:first-of-type img {
+    width: 100% !important;
+    height: 100% !important;
+}
+.from-header-title + div > div:first-of-type:after {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    right: -33px;
+    z-index: 1;
+    width: 62px;
+    height: 62px;
+    background: url("https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F02beb512-8894-43aa-8062-644bec49a0e8%2FUntitled.svg&blockId=2b3e0695-eb83-40a3-a343-f075be26a058")
+    center / contain no-repeat;
+    content: '';
+}
+@media screen and (max-width: 980px) {
+    .from-header-title {
+        padding: 0 24px;
+        text-align: center;
+    }
+    .from-header-title + div { padding: 0 24px !important;}
+    .from-header-title + div > div:first-of-type {
+        width: 82px !important;
+        height: 82px !important;
+    }
+    .from-header-title + div > div:first-of-type:after {
+        bottom: 5px;
+        width: 48px;
+        height: 48px;
+    }
+}
+.from-header-title + div > div:nth-of-type(2) { display: none !important; }
+/* 노션 프롬 노션 앞 타이틀*/
+.from-header-title + div > div.notion-page-block { display: none !important; }
+
+
+
+
+
+/*  노션 본 콘텐츠 시작
+    _______
+*/
+/* width값 재 세팅 */
+.notion-app .notion-page-content {
+    padding: 0 40px !important;
+    max-width: 1440px !important;
+    width: 100% !important;
+}
+/*.notion-app .notion-page-content > div:first-of-type { max-width: 100%; padding: 0; background: #f5f5f5; }*/
+.notion-app .notion-page-content > div {
+    /*max-width: 1440px;
+    width: 100%;
+    padding: 0 40px;*/
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+a.duplicate { display: none !important; }
+.notion-app .notion-page-content > div:last-of-type(2) { display: none !important;}
+.notion-app .notion-page-content > div:first-of-type { font-family: var(--font-montserrat) !important; margin-bottom: 0 !important; }
+@media screen and (max-width: 980px) {
+    .notion-app .notion-page-content { padding: 0 24px !important; }
+}
+
+/* 상단 프롬 움직이는 웹 pc에서 숨김*/
+@media screen and (min-width: 781px) {
+    .notion-app .notion-page-content > div:nth-of-type(5) { display: none !important;}
+}
+
+.notion-app-inner > .notion-frame > div:first-of-type > div:nth-of-type(1) { display: none !important; }
+.notion-app-inner > .notion-frame > div:first-of-type > div:nth-of-type(2) { display: block !important;}
+.notion-app-inner > .notion-frame > div:first-of-type > div:nth-of-type(2) .notion-topbar {
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.notion-app-inner > .notion-frame > div:first-of-type > div:nth-of-type(2) .notion-topbar > div:first-of-type {display: none !important; }
+.notion-app-inner > .notion-frame > div:first-of-type > div:nth-of-type(2) > div:nth-of-type(3) { display: none !important; }
+
+
+
+
+/*  노션 블록별 컴포넌트 조정
+    ______
+*/
+/* 텍스트 블록 타이포 조정 */
+.notion-header-block > div > h2,
+.notion-sub_header-block > div > h3,
+.notion-sub_sub_header-block > div > h4,
+.notion-text-block > div > div { padding: 0; font-weight: 400; }
+
+/*
+.notion-header-block > div > h2 { font-size: var(--font-h1); line-height: var(--font-h1-l); }
+.notion-sub_header-block > div > h3 { font-size: var(--font-h5); line-height: var(--font-h5-l); }
+.notion-sub_sub_header-block > div > h4 { font-size: var(--font-h6); line-height: var(--font-h6-l); }
+.notion-text-block > div > div { font-size: var(--font-body); line-height: var(--font-body-l); }
+*/
+
+.notion-header-block > div > h2 { font-size: var(--font-h4); line-height: var(--font-h4-l); margin-bottom: 16px; }
+.notion-sub_header-block > div > h3 { font-size: var(--font-h5); line-height: var(--font-h5-l); margin-bottom: 16px; }
+.notion-sub_sub_header-block > div > h4 { font-size: var(--font-h6); line-height: var(--font-h6-l); margin-bottom: 16px; }
+.notion-text-block > div > div { font-size: var(--font-body); line-height: var(--font-body-l); }
+/*@media screen and (max-width: 980px) {*/
+/*    .notion-text-block > div > div { font-size: 14px; line-height: 21px; }*/
+/*}*/
+
+
+
+/* 라인 블록 */
+.notion-divider-block > div  { height: auto !important; }
+.notion-divider-block > div > div { border-color: var(--color-gray-line); margin-bottom: 12px; }
+
+
+/* 이미지 블록 */
+.notion-image-block {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-line);
+}
+
+
+
+/* 갤러리 뷰 */
+.notion-collection_view-block > div:nth-of-type(2) > div > div:first-of-type { padding: 0 !important }
+.notion-collection_view-block > div { padding: 0; }
+.notion-collection_view-block .notion-gallery-view { padding: 0; }
+.notion-collection_view-block .notion-gallery-view div { gap: 24px; height: auto !important; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block > div > div { padding: 24px 0 0 !important; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a { box-shadow: none !important; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div { gap: 0 !important; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div:hover { background: none !important; opacity:.8; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:first-of-type > div > div {
+    border: 1px solid var(--color-gray-line);
+    border-radius: 8px;
+    padding-top: 52.176%;
+}
+@media screen and (max-width: 980px) {
+    .notion-collection_view-block .notion-gallery-view div { gap: 0 !important; }
+    .notion-collection_view-block .notion-gallery-view .notion-collection_view-block > div > div { display: block !important; }
+    .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a { margin-bottom: 32px !important; height: auto !important; }
+    .notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item:last-of-type a { margin-bottom: 0 !important; }
+}
+
+
+/* 갤러리 뷰 텍스트 영역 */
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(2) {
+    padding: 8px 4px 6px !important;
+    font-family: var(--font-montserrat);
+}
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(2) > div { font-weight: 700; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) { padding: 0 !important; }
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) > div {
+    font-size: var(--font-caption);
+    line-height: 21px;
+    font-family: var(--font-montserrat);
+}
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) > div:last-of-type > div {
+    gap: 4px; margin-top: 8px; height: auto !important;
+}
+.notion-collection_view-block .notion-gallery-view .notion-collection_view-block .notion-collection-item a > div > div:nth-of-type(3) > div:last-of-type > div > div {
+    padding: 4px 8px !important;
+    height: auto !important;
+    font-size: var(--font-caption) !important;
+    line-height: var(--font-caption-l) !important;
+}
+
+/* 갤러리 뷰 리스트 화면 유저에서 안보이게 하기*/
+.notion-app .notion-page-content > .notion-collection_view-block > div:first-of-type { display: none; }
+
+/* 컬럼 뷰 */
+.notion-column_list-block > div > div { padding: 0 !important}
+@media screen and (max-width: 980px) {
+    .notion-column_list-block > div { display: block !important; }
+    .notion-column_list-block > div > div { width: 100% !important; }
+    .notion-column_list-block > div > div:nth-of-type(2n) { height: 16px !important; }
+}
+
+/* 링크 페이지 뷰 (버튼)*/
+.notion-page-block,
+.notion-text-block { border-radius: 8px !important; }
+.notion-page-block:not(.notion-collection-item) > a,
+.notion-page-mention-token {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px !important;
+    border: 1px solid var(--color-gray-line);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notion-page-block:not(.notion-collection-item) > a div,
+.notion-page-mention-token span { font-weight: 700 !important; }
+.notion-page-block:not(.notion-collection-item) > a > div:hover,
+.notion-page-mention-token:hover { background: none !important; box-shadow: none !important; }
+.notion-page-block:not(.notion-collection-item) > a:hover,
+.notion-page-mention-token:hover { opacity: 0.6; }
+
+.notion-page-block:not(.notion-collection-item) > a div,
+.notion-page-mention-token div,
+.notion-page-mention-token__title{ border: none !important; }
+
+@media screen and (max-width: 980px) {
+    .notion-page-block:not(.notion-collection-item) > a,
+    .notion-page-mention-token {
+        /*font-size: 16px;*/
+        /*line-height: 24px;*/
+        /*padding: 8px;*/
+    }
+}
+
+
+/* 바로가기 아이콘 삭제 */
+.notion-emoji {
+    position: relative;
+    top: -3px;
+    width: 21px !important;
+    height: 21px !important;
+    vertical-align: top;
+}
+.notion-page-mention-token .notion-emoji { top: 0; }
+.notion-emoji + svg { display: none !important; }
+
+
+/* 북마크 */
+.notion-bookmark-block a {
+    border: 1px solid var(--color-gray-line);
+    border-radius: 8px;
+}
+
+
+
+/* 페이지 멘션일경우 */
+.notion-page-mention-token { }
+
+
+
+/* 노션 콜아웃(링크) 버튼 -- 외부 링크를 사용할 경우 */
+.notion-callout-block { font-size: 20px; line-height: 28px; }
+.notion-callout-blcok > div > div { border-color: var(--color-gray-line) !important; border-radius: 8px !important; }
+
+
+
+
+
+
+
+
+
+
+
+/* 프롬 상단 헤더 */
+.from-header {
+    max-width: 1440px;
+    width: 100%;
+    padding: 48px 40px 0;
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    word-break: keep-all;
+}
+.from-header-wrap { position: relative; }
+.from-header .from-header__logo,
+.from-header .from-header__text {
+    display: inline-block;
+    vertical-align: top;
+}
+.from-header .from-header__logo {
+    /*width: calc(100% * 436/1360);*/
+    width: 436px;
+    height: 150px;
+    padding-bottom: 0;
+    background: url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7f187c22-6215-4966-b2ff-b405199ac96f/from_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220318%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220318T170651Z&X-Amz-Expires=86400&X-Amz-Signature=34300b5602320afc60080a71ff7dc491d563a0553a3f823cfaaf69bd98ed2ce2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22from_logo.png%22&x-id=GetObject')
+    center / contain no-repeat;
+    /*height: 0;
+    padding-bottom: 11%;*/
+}
+.from-header .from-header__text {
+    width: calc(100% * 551/1360);
+    padding: 32px 0 48px;
+    margin-left: calc(100% * 139/1360);
+}
+.from-header .from-header__text > h5 {
+    font-size: 32px;
+    line-height: 40px;
+    padding: 0;
+    margin: 0 0 40px;
+}
+.from-header .from-header__text > p {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+.from-header .from-header__home-btn {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    background: url('https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3cf0cbb4-fe78-481c-8b1b-5fc135a11bd5/ICON.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220318%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220318T183646Z&X-Amz-Expires=86400&X-Amz-Signature=cf7b288c5dd730d03ed8d74179d1419cbada5079ca64377f54585e25b9c55175&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22ICON.png%22&x-id=GetObject')
+    center / contain no-repeat;
+}
+.from-header .from-header__home-btn:hover,
+.from-header .from-header__home-btn:focus { opacity: 0.6; }
+.from-header .from-header__home-btn a {display: block; width: 100%; height: 100%; }
+
+@media screen and (max-width: 1040px) {
+    .from-header .from-header__logo {
+        display: block;
+        width: 230px;
+        height: 76px;
+    }
+    .from-header .from-header__text {
+        margin-left: 0;
+        width: calc(75% + 4px);
+    }
+    .from-header .from-header__home-btn {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .from-header .from-header__text {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* sns 영역 */
+div.notion-column_list-block[data-block-id='8fdd561b-a94e-4282-9b8c-caf74ced77d6'] {
+}
+div.notion-column_list-block[data-block-id='8fdd561b-a94e-4282-9b8c-caf74ced77d6'] .notion-image-block { border: none !important; }
+div.notion-column_list-block[data-block-id='8fdd561b-a94e-4282-9b8c-caf74ced77d6'] > div > div {
+    display: inline-block !important;
+    width: auto !important;
+    margin-right: 8px;
+}
+div.notion-column_list-block[data-block-id='8fdd561b-a94e-4282-9b8c-caf74ced77d6'] > div > div a { border: none !important; }
+div.notion-column_list-block[data-block-id='8fdd561b-a94e-4282-9b8c-caf74ced77d6'] > div > div:nth-of-type(2n) {
+    width: 0 !important;
+    margin-right: 0;
+}
+
+
+@media screen and (max-width: 980px) {
+    div.notion-column-block[data-block-id='a810323f-9bae-45da-85a8-a68089152a00'] { display: none !important; }
+}
+
+
+div.notion-toggle-block[data-block-id='06c3884e-2845-435b-8d66-574fd9840f03'] {
+    display: none !important;
+}
+/* 최하단 움직이는 이미지 삭제 */
+@media screen and (max-width: 980px) {
+    div.notion-column-block[data-block-id='257a1f32-f4bb-4dfd-8e59-284acf33762b'] { display: none !important;}
+}
