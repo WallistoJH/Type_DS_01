@@ -51,7 +51,7 @@ html,body{
   position: absolute;
   top: 16px;
   left: 16px;
-  z-index: 2;
+  z-index: 10;
 }
 
 #x-button {
@@ -73,7 +73,6 @@ html,body{
   height: 24px;
   border-radius: 1000px;
   cursor: pointer;
-  z-index: 10;
 }
 #button button { opacity: .4;}
 #button .opa-1 { opacity: 1 !important;}
