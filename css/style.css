@@ -58,7 +58,7 @@ html,body{
   position: absolute;
   right: 16px;
   top: 16px;
-  z-index: 2;
+  z-index: 10;
 }
 
 #button button,
@@ -73,6 +73,7 @@ html,body{
   height: 24px;
   border-radius: 1000px;
   cursor: pointer;
+  z-index: 10;
 }
 #button button { opacity: .4;}
 #button .opa-1 { opacity: 1 !important;}
