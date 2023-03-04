@@ -154,12 +154,12 @@ main > section .type-face.title-hover.pa-type:nth-of-type(2n) svg {
 
 main > section .type-face.title-hover.yo-type svg {
   transform: rotate(24deg);
-  animation: 3s in-rotate-3 infinite;
+  animation: 1.5s in-rotate-3 infinite;
 
 }
 main > section .type-face.title-hover.yo-type:nth-of-type(2n) svg {
   transform: rotate(-24deg);
-  animation: 3s in-rotate-4 infinite;
+  animation: 1.5s in-rotate-4 infinite;
 }
 
 
