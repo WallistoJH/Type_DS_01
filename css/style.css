@@ -226,7 +226,7 @@ body{
   top: 50%;
   left: 0;
   right: 0;
-  z-index: 0;
+  z-index: -1;
   width: 80%;
   height: 100%;
   background:  url('../img/bg1-1.svg') center/ cover no-repeat;
