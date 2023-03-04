@@ -45,7 +45,7 @@ html,body{
 .z-in-3 { z-index: 3;}
 .z-in-2 { z-index: 2;}
 .opa-6{ opacity: .6;}
-.opa-0 { opacity: 0; pointer-events: none;}
+.opa-0 { opacity: 0 !important; pointer-events: none;}
 .opa-1 { opacity: 1;}
 #button {
   position: absolute;
@@ -74,7 +74,7 @@ html,body{
   border-radius: 1000px;
   cursor: pointer;
 }
-#button button { opacity: .4;}
+.z-button { opacity: .4;}
 #button .opa-1 { opacity: 1 !important;}
 
 #x-button #yo-x-btn,#x-button #jo-x-btn,#x-button #pa-x-btn {
@@ -217,6 +217,31 @@ body{
 
 }
 
+
+
+
+/* 바깥 배경 화면 */
+.sec-bg01 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  width: 80%;
+  height: 100%;
+  background:  url('../img/bg1-1.svg') center/ cover no-repeat;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  animation: 3s in-bgbg-1 infinite;
+}
+
+@keyframes in-bgbg-1 {
+  0% { background:  url('../img/bg1-1.svg') center/ contain no-repeat; }
+  25% { background:  url('../img/bg1-2.svg') center/ contain no-repeat; }
+  50% { background:  url('../img/bg1-1.svg') center/ contain no-repeat; }
+  75% { background:  url('../img/bg1-2.svg') center/ contain no-repeat; }
+  100% { background:  url('../img/bg1-1.svg') center/ contain no-repeat; }
+}
 
 
 
