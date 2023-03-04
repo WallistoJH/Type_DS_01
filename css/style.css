@@ -128,12 +128,12 @@ main > section .type-face:hover {
 
 main > section .type-face.title-hover.jo-type svg {
   transform: rotate(-24deg);
-  animation: .75s in-rotate-1 infinite;
+  animation: 3s in-rotate-1 infinite;
   /* transform: rotate(24deg); */
 }
 main > section .type-face.title-hover.jo-type:nth-of-type(2n) svg {
   transform: rotate(24deg);
-  animation: .75s in-rotate-2 infinite;
+  animation: 3s in-rotate-2 infinite;
 }
 
 
@@ -142,11 +142,11 @@ main > section .type-face.title-hover.jo-type:nth-of-type(2n) svg {
 
 main > section .type-face.title-hover.pa-type svg {
   transform: rotate(-24deg);
-  animation: 1.4s in-rotate-2 infinite;
+  animation: 1.5s in-rotate-2 infinite;
 }
 main > section .type-face.title-hover.pa-type:nth-of-type(2n) svg {
   transform: rotate(24deg);
-  animation: 1.4s in-rotate-1 infinite;
+  animation: 1.5s in-rotate-1 infinite;
 }
 
 
